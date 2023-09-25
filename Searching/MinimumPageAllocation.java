@@ -1,3 +1,5 @@
+package Searching;
+
 public class MinimumPageAllocation {
     public static int minPages(int arr[],int k){
         int sum=0,mx=0;
