@@ -1,6 +1,6 @@
 package Sorting;
 import java.util.Arrays;
-public class unionOfTwoSortedArrays {
+public class unionOfTwoSortedArrays_NAIVE {
     static void printUnion(int a[],int b[]){
         int m=a.length;
         int n=b.length;
