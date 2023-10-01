@@ -3,7 +3,7 @@ package Sorting;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class kth_smallest_element {
+public class kth_smallest_element_Naive {
     static int kthSmallest(int arr[],int k){
         int n=arr.length;
         Arrays.sort(arr);
