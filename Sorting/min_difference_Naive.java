@@ -1,6 +1,6 @@
 package Sorting;
 
-public class min_difference {
+public class min_difference_Naive {
     static int getMinDiff(int arr[],int n){
         int res=Integer.MAX_VALUE;
         for (int i = 1; i < n; i++) {
@@ -12,7 +12,7 @@ public class min_difference {
     }
 
     public static void main(String[] args) {
-        int arr[]={5,3,8,10};
+        int arr[]={5,3,8,10,6};
         int min=getMinDiff(arr, arr.length);
         System.out.println(min);
     }

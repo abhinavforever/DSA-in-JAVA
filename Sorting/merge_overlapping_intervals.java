@@ -29,6 +29,23 @@ public class merge_overlapping_intervals {
          }
      }
 
+    static void mergeIntervals(Interval arr[],int n){
+        Arrays.sort(arr, (interval1, interval2) -> Integer.compare(interval1.getStart(), interval2.getStart()));
+
+        int res=0;
+        for (int i = 1; i < n; i++) {
+            if(arr[res].end>=arr[i].start){
+                arr[res].end=Math.max(arr[res].end,arr[i].end);
+                arr[res].start=Math.min(arr[res].start,arr[i].start);
+            }
+            else{
+                res++;arr[res]=arr[i];
+            }
+        }
+        for (int i = 0; i <=res; i++) {
+            System.out.println(arr[i].start+" "+arr[i].end);
+        }
+    }
         public static void main(String[] args) {
             Interval[] intervals = new Interval[4];
 
@@ -44,27 +61,4 @@ public class merge_overlapping_intervals {
             mergeIntervals(intervals,intervals.length);
         }
 
-        static void mergeIntervals(Interval arr[],int n){
-            Arrays.sort(arr, new Comparator<Interval>() {
-                @Override
-                public int compare(Interval interval1, Interval interval2) {
-                    return Integer.compare(interval1.getStart(), interval2.getStart());
-                }
-            });
-
-            int res=0;
-            for (int i = 1; i < n; i++) {
-                if(arr[res].end>=arr[i].start){
-                    arr[res].end=Math.max(arr[res].end,arr[i].end);
-                    arr[res].start=Math.min(arr[res].start,arr[i].start);
-                }
-                else{
-                    res++;arr[res]=arr[i];
-                }
-            }
-            for (int i = 0; i <=res; i++) {
-                System.out.println(arr[i].start+" "+arr[i].end);
-            }
-        }
 }
-
