@@ -2,9 +2,11 @@ package String;
 
 import java.util.Scanner;
 
-public class is_Subsequence {
+public class is_Subsequence_Iterative {
     static boolean isSubseq(String s1,String s2){
         int n=s1.length(),m=s2.length();
+        if(n<m)
+            return false;
         int j=0;
         for (int i = 0; i < n && j<m; i++) {
             if(s1.charAt(i)==s2.charAt(j))
