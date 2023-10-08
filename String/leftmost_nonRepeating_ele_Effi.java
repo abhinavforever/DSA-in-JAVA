@@ -1,11 +1,8 @@
 package String;
-
 import java.util.Arrays;
 import java.util.Scanner;
-
 public class leftmost_nonRepeating_ele_Effi {
     static final int CHAR=256;
-
     static int leftmost(String str){
         int count[]=new int[CHAR];
         Arrays.fill(count,-1);
@@ -22,7 +19,6 @@ public class leftmost_nonRepeating_ele_Effi {
         }
         return (res==Integer.MAX_VALUE)?-1:res;
     }
-
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         String str=sc.next();
