@@ -1,7 +1,6 @@
 package String;
 
 import java.util.Scanner;
-
 public class leftmost_nonRepeating_ele_Naive {
     static int leftmost(String str){
         boolean flag=false;

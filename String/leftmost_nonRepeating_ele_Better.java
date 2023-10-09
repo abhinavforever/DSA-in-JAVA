@@ -1,7 +1,6 @@
 package String;
 
 import java.util.Scanner;
-
 public class leftmost_nonRepeating_ele_Better {
     static final int CHAR=256;
     static int leftmost(String str){

@@ -1,5 +1,4 @@
 package String;
-
 public class leftmost_repeating_element_naive {
     static int leftmost(String str){
         for (int i = 0; i < str.length(); i++) {

@@ -1,7 +1,6 @@
 package String;
 import java.util.Arrays;
 import java.util.Scanner;
-
 public class leftmost_repeating_element_effi1 {
     static final int CHAR=256;
     static int leftmost(String str){

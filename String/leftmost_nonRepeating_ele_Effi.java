@@ -1,5 +1,6 @@
 package String;
 import java.util.Arrays;
+
 import java.util.Scanner;
 public class leftmost_nonRepeating_ele_Effi {
     static final int CHAR=256;
