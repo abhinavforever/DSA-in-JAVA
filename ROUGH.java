@@ -1,26 +1,35 @@
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class ROUGH {
-    static int[] insert(int arr[],int pos,int cap,int n,int x){
-        if(n==cap){
-            return arr;
-        }
-        int idx=pos-1;
-        for (int i = n-1; i >=idx ; i--) {
-            arr[i+1]=arr[i];
-        }
-        arr[idx]=x;
-        return arr;
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String input = sc.nextLine();
+        String result = replaceAdjacentDuplicates(input);
+        System.out.println(result);
     }
 
-    public static void main(String[] args) {
-        int arr[]={1,2,3,4,5,0};
-//        int cap=6;
-//        int arr[]=new int [cap];
-//        for (int i = 0; i < 5; i++) {
-//            arr[i]=i+1;
-//        }
-        insert(arr,2, arr.length, arr.length-1,-1);
-        System.out.println(Arrays.toString(arr));
+    public static String replaceAdjacentDuplicates(String s) {
+        StringBuilder sb = new StringBuilder();
+        int i = 0;
+        int n = s.length();
+
+        while (i < n) {
+            char currentChar = s.charAt(i);
+            sb.append(currentChar);
+
+            int j = i + 1;
+            while (j < n && s.charAt(j) == currentChar) {
+                j++;
+            }
+
+            if (j - i > 1) {
+                // Replace adjacent duplicates with their uppercase version
+                sb.setCharAt(sb.length() - 1, Character.toUpperCase(currentChar));
+            }
+
+            i = j;
+        }
+
+        return sb.toString();
     }
 }
