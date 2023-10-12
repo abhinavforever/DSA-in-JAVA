@@ -1,4 +1,4 @@
-package Linked_List;
+package Linked_List.Linked_List_singly;
 
 public class Recursive_display_ll {
     public static void main(String[] args) {

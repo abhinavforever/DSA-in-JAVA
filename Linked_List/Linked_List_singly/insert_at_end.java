@@ -1,4 +1,4 @@
-package Linked_List;
+package Linked_List.Linked_List_singly;
 
 public class insert_at_end {
     public static void main(String[] args) {
