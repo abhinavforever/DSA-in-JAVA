@@ -1,3 +1,5 @@
+package Rough;
+
 import java.util.Scanner;
 
 public class ROUGH {
