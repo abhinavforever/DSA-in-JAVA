@@ -2,7 +2,7 @@ package Linked_List.Linked_List_singly;
 
 import java.util.Scanner;
 
-public class Search_in_ll {
+public class Search_in_ll_Iterative {
     static int search(Node head,int x){
         int pos=1;
         Node curr=head;
