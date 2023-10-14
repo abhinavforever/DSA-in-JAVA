@@ -1,4 +1,4 @@
-package Linked_List.Linked_List_doubly;
+package Linked_List.circular_doubly;
 
 class Node{
     int data;
@@ -19,15 +19,16 @@ public class Implementation {
         temp1.prev=head;
         temp1.next=temp2;
         temp2.prev=temp1;
+        temp2.next=head;
+        head.prev=temp2;
         Print(head);
     }
     static void Print(Node head) {
-        Node cur = head;
-        while(cur!=null){
-            System.out.print(cur.data+" ");
-            cur = cur.next;
-        }
-
+        if(head==null)
+            return;
+        System.out.print(head.data+" ");
+        for(Node r=head.next;r!=head;r=r.next)
+            System.out.print(r.data+" ");
     }
 
 }
