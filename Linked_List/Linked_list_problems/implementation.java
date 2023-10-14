@@ -1,4 +1,4 @@
-package Linked_List.Linked_List_singly;
+package Linked_List.Linked_list_problems;
 
 class Node{
     int data;
