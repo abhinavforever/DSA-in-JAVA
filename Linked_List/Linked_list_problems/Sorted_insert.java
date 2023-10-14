@@ -30,7 +30,6 @@ public class Sorted_insert {
         System.out.println("\nenter data: ");
         int x=sc.nextInt();
         head=sortedInsert(head,x);
-        System.out.println();
         Print(head);
     }
     static void Print(Node head) {
