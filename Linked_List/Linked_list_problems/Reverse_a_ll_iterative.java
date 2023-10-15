@@ -1,8 +1,6 @@
 package Linked_List.Linked_list_problems;
 
-import java.util.Scanner;
-
-public class Reverse_a_ll {
+public class Reverse_a_ll_iterative {
     static Node reverse(Node head){
         Node curr=head;
         Node prev=null;
