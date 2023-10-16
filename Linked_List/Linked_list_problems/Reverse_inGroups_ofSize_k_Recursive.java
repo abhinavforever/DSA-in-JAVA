@@ -2,7 +2,7 @@ package Linked_List.Linked_list_problems;
 
 import java.util.Scanner;
 
-public class Reverse_inGroups_ofSize_k {
+public class Reverse_inGroups_ofSize_k_Recursive {
 
     static Node reversek(Node head,int k){
         Node curr=head,next=null,prev=null;
