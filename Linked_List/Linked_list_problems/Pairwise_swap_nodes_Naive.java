@@ -1,6 +1,6 @@
 package Linked_List.Linked_list_problems;
 
-public class Pairwise_swap_nodes {
+public class Pairwise_swap_nodes_Naive {
 
     static void pairwise_swap(Node head){
         Node curr=head;
@@ -8,7 +8,6 @@ public class Pairwise_swap_nodes {
             int temp=curr.data;
             curr.data=curr.next.data;
             curr.next.data=temp;
-
             curr=curr.next.next;
         }
     }
@@ -20,16 +19,11 @@ public class Pairwise_swap_nodes {
         head.next.next.next.next=new Node(50);
         head.next.next.next.next.next=new Node(60);
 
-        Node head2=new Node(1);
-        head2.next=new Node(2);
-        head2.next.next= head.next.next;
-
         Print(head);
         System.out.println();
-        Print(head2);
+        pairwise_swap(head);
         System.out.println();
-        int data=pairwise_swap(head);
-        System.out.println(data);
+        Print(head);
     }
     static void Print(Node head) {
         Node cur = head;
