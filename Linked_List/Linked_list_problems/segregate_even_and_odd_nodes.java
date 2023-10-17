@@ -26,12 +26,15 @@ public class segregate_even_and_odd_nodes {
                 }
             }
         }
-        if(os==null || es==null){
-            return head;
+        if (ee != null) {
+            ee.next = os;
         }
-        ee.next=os;
-        oe.next=null;
-        return es;
+
+        if (oe != null) {
+            oe.next = null;
+        }
+
+        return es != null ? es : os;
     }
     public static void main(String[] args) {
         Node head=new Node(10);
@@ -72,17 +75,17 @@ public class segregate_even_and_odd_nodes {
 //            return head;
 //        }
 //
-//        Node1 evenHead = null, evenTail = null, oddHead = null, oddTail = null;
+//        Node1 evenHead = null, ee = null, oddHead = null, oddTail = null;
 //        Node1 current = head;
 //
 //        while (current != null) {
 //            if (current.data % 2 == 0) {
 //                if (evenHead == null) {
 //                    evenHead = current;
-//                    evenTail = current;
+//                    ee = current;
 //                } else {
-//                    evenTail.next = current;
-//                    evenTail = current;
+//                    ee.next = current;
+//                    ee = current;
 //                }
 //            } else {
 //                if (oddHead == null) {
@@ -96,8 +99,8 @@ public class segregate_even_and_odd_nodes {
 //            current = current.next;
 //        }
 //
-//        if (evenTail != null) {
-//            evenTail.next = oddHead;
+//        if (ee != null) {
+//            ee.next = oddHead;
 //        }
 //
 //        if (oddTail != null) {

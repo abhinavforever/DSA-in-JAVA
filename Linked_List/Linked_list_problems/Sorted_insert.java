@@ -3,7 +3,7 @@ package Linked_List.Linked_list_problems;
 import java.util.Scanner;
 
 public class Sorted_insert {
-    static Node sortedInsert(Node head,int x){
+    static Node sortedInsert(Node head, int x){
         Node temp=new Node(x);
         if(head==null)
             return temp;

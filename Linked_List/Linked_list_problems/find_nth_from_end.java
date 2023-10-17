@@ -3,9 +3,9 @@ package Linked_List.Linked_list_problems;
 import java.util.Scanner;
 
 public class find_nth_from_end {
-    static void printNthfromend(Node head,int n){
+    static void printNthfromend(Node head, int n){
         int len=0;
-        for(Node curr=head;curr!=null;curr=curr.next)
+        for(Node curr = head; curr!=null; curr=curr.next)
             len++;
         if(len<n){
             return;

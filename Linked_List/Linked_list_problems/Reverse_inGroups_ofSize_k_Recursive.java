@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Reverse_inGroups_ofSize_k_Recursive {
 
-    static Node reversek(Node head,int k){
+    static Node reversek(Node head, int k){
         Node curr=head,next=null,prev=null;
         int count=0;
         while (curr!=null && count<k){
