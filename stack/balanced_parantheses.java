@@ -1,7 +1,5 @@
 package stack;
-
 import java.util.Scanner;
-import java.util.Stack;
 class Node1{
     char data;
     Node1 next;
@@ -43,24 +41,23 @@ class mystack{
         return head.data;
     }
 }
-public class b {
-
+public class balanced_parantheses {
     static boolean isBalanced(String str){
         mystack s=new mystack();
         for(int i=0;i<str.length();i++){
             if(str.charAt(i)=='(' || str.charAt(i)=='{' || str.charAt(i)=='[')
                 s.push(str.charAt(i));
             else {
-                if(s.isEmpty())
+                if(s.isEmpty()==true)
                     return false;
-                else if(matching(s.peek(),str.charAt(i))){
+                else if(matching(s.peek(),str.charAt(i))==false){
                     return false;
                 }
                 else
                     s.pop();
             }
         }
-        return (s.isEmpty());
+        return (s.isEmpty()==true);
     }
     static boolean matching(char a,char b){
         return ((a=='(' && b==')') || (a=='{' && b=='}') || (a=='[' && b==']'));
@@ -70,6 +67,6 @@ public class b {
         Scanner sc=new Scanner(System.in);
         String s= sc.next();
         System.out.println("string is balanced(true) or not(false) : ");
-        isBalanced(s);
+        System.out.println(isBalanced(s));
     }
 }
