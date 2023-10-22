@@ -1,5 +1,5 @@
 package stack;
-public class previous_greater_element {
+public class previous_greater_element_Naive {
     static void printPrevGreater(int arr[],int n){
         for(int i=0;i<n;i++){
             int j;
