@@ -21,7 +21,7 @@ public class Longest_Rectangular_area_Better {
         ArrayList<Integer> a=new ArrayList<>();
         Stack<Integer> s=new Stack<>();
         s.push(arr[0]);
-        System.out.print(-1+" ");
+        a.add(-1);
         for(int i=1;i<n;i++){
             while (s.isEmpty()==false && s.peek()>=arr[i])
                 s.pop();
@@ -37,9 +37,9 @@ public class Longest_Rectangular_area_Better {
         s.push(arr[n-1]);
         a.add(-1);
         for (int i=n-2;i>=0;i--){
-            while (s.empty()==false && s.peek()<=arr[i])
+            while (s.isEmpty()==false && s.peek()<=arr[i])
                 s.pop();
-            int ns=s.isEmpty()?-1:s.peek();
+            int ns=(s.isEmpty())?-1:s.peek();
             a.add(ns);
             s.push(arr[i]);
         }
