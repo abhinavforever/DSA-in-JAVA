@@ -1,9 +1,7 @@
 package Queue;
-
 import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.Stack;
-
 public class Reverse_iterative {
     static void reverse (Queue<Integer> q){
         Stack<Integer> s=new Stack<Integer>();
@@ -14,7 +12,6 @@ public class Reverse_iterative {
             q.offer(s.pop());
         }
     }
-
     public static void main(String[] args) {
         Queue<Integer> q=new ArrayDeque<Integer>();
         q.offer(1);

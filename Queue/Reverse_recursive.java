@@ -1,8 +1,6 @@
 package Queue;
-
 import java.util.ArrayDeque;
 import java.util.Queue;
-
 public class Reverse_recursive {
     static void reverse(Queue<Integer> q){
         if(q.isEmpty())
@@ -12,7 +10,6 @@ public class Reverse_recursive {
         reverse(q);
         q.offer(x);
     }
-
     public static void main(String[] args) {
         Queue<Integer> q=new ArrayDeque<Integer>();
         q.offer(1);
