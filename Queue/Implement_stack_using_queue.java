@@ -1,9 +1,6 @@
 package Queue;
-
-
 import java.util.ArrayDeque;
 import java.util.Queue;
-
 class Stack1 {
     Queue<Integer> q1=new ArrayDeque<>();
     Queue<Integer> q2=new ArrayDeque<>();
