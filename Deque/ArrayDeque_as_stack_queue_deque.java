@@ -1,6 +1,6 @@
 package Deque;
 import java.util.ArrayDeque;
-public class ArrayDeque_as_Queue {
+public class ArrayDeque_as_stack_queue_deque {
     public static void main(String[] args) {
 
         //array deque as stack
