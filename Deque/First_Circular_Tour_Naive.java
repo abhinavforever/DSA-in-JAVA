@@ -1,6 +1,5 @@
 package Deque;
-
-public class First_Circular_Tour {
+public class First_Circular_Tour_Naive {
     static int firstPetrolPump(int petrol[],int dist[],int n){
         for(int start=0;start<n;start++){
             int curr_petrol=0;
@@ -16,7 +15,6 @@ public class First_Circular_Tour {
         }
         return -1;
     }
-
     public static void main(String[] args) {
         int petrol[]={4,8,7,4};
         int dist[]={6,5,3,5};
