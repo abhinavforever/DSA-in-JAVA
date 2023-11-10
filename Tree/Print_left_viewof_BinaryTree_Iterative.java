@@ -1,8 +1,6 @@
 package Tree;
-
 import java.util.LinkedList;
 import java.util.Queue;
-
 public class Print_left_viewof_BinaryTree_Iterative {
     static void printLeft(Node root){
         if(root==null)

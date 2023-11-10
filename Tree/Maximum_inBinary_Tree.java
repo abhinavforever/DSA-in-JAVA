@@ -1,5 +1,4 @@
 package Tree;
-
 public class Maximum_inBinary_Tree {
     static int getMax(Node root){
         if(root==null)
@@ -7,7 +6,6 @@ public class Maximum_inBinary_Tree {
         else
             return Math.max(root.key,Math.max(getMax(root.left),getMax(root.right)));
     }
-
     public static void main(String[] args) {
         Node root=new Node(10);
         root.left=new Node(15);
