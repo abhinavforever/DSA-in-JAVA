@@ -1,4 +1,4 @@
-package Tree;
+package Tree_exam;
 class Node{
     int key;
     Node left;
