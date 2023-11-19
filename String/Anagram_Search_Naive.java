@@ -1,4 +1,4 @@
-package String;
+package Tree;
 import java.util.Scanner;
 public class Anagram_Search_Naive {
     static boolean isPresent(String txt,String pat){
