@@ -1,4 +1,4 @@
-package Tree_exam;
+package Tree;
 
 //lowest common ancestor
 public class lca_effective {
@@ -9,18 +9,18 @@ public class lca_effective {
         }
         Node left=lowestCommonAncestor(root.left,p,q);
         Node right=lowestCommonAncestor(root.right,p,q);
-        
+
         if(left==null){
             return right;
         }
         if(right==null)
             return left;
-        else 
+        else
             return root;
     }
 
     public static void main(String[] args) {
-         Node root=new Node(10);
+        Node root=new Node(10);
         root.left=new Node(20);
         root.right=new Node(30);
         root.right.left=new Node(40);
