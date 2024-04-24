@@ -21,7 +21,7 @@ public class insert_at_begin {
         temp2.prev=temp1;
         Print(head);
         Scanner sc=new Scanner(System.in);
-        System.out.println("\nenter ele to be inserted :");
+        System.out.println("\nEnter ele to be inserted :");
         int x=sc.nextInt();
         head=insertBegin(head,x);
         Print(head);
