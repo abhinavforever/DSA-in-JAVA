@@ -28,7 +28,7 @@ public class Lexicographic_Rank_ofString{
     }
 
     public static void main(String[] args) {
-        String inputString = "string";
+        String inputString = "dcba";
         int rank = lexicographicRank(inputString);
         System.out.println("The lexicographic rank of '" + inputString + "' is " + rank);
     }

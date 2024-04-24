@@ -14,11 +14,15 @@ public class insert_at_begin {
         return temp;
     }
     static void Print(Node head) {
-        Node cur = head;
-        while(cur!=null){
-            System.out.print(cur.data+" ");
-            cur = cur.next;
+//        Node cur = head;
+//        while(cur!=null){
+//            System.out.print(cur.data+" ");
+//            cur = cur.next;
+        if(head==null){
+            return;
         }
+        System.out.println(head.data);
+        Print(head.next);
 
     }
 }
