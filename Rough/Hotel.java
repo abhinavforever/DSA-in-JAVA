@@ -1,62 +1,31 @@
 package Rough;
+import java.util.*;
+ class Hotel{
+     static int maxLen(int[] arr, int n)
+     {
+         // Your code here
+         HashMap<Integer,Integer> m=new HashMap<>();
+         int i=0,j=0;
+         int max=0;
+         while(i<=n-1 && j<=n-1){
+             m.put(arr[i],m.getOrDefault(arr[i],0)+1);
+             while(m.getOrDefault(0,0)!=m.getOrDefault(1,0)){
+                 i++;
+                 if(i<=n-1){
+                     m.put(arr[i],m.getOrDefault(arr[i],0)+1);
+                 }
+             }
+             if(m.getOrDefault(0,0) == m.getOrDefault(1,0) && i<=j){
+                 max=Math.max(max,j-i+1);
+                 j++;
+             }
 
- class Hotel {
-    private int n; // Number of rooms
-    private int[][] doors; // Connections between rooms
-    private int[] roomTypes; // Types of rooms (0: empty, 1: sleeping kid, 2: mosquito)
-    private boolean[] visited; // To keep track of visited rooms
-    private int minDoorsToClose; // Minimum number of doors to close
+         }
+         return max;
+     }
 
-    public Hotel(int n, int[][] doors, int[] roomTypes) {
-        this.n = n;
-        this.doors = doors;
-        this.roomTypes = roomTypes;
-        this.visited = new boolean[n];
-        this.minDoorsToClose = 0;
-    }
-
-    // DFS to traverse the rooms and close doors to separate kids from mosquitoes
-    private void dfs(int room) {
-        visited[room] = true;
-        for (int i = 0; i < n; i++) {
-            if (doors[room][i] == 1 && !visited[i]) {
-                if (roomTypes[i] == 2) {
-                    minDoorsToClose++; // Close the door if there's a mosquito in the adjacent room
-                } else {
-                    dfs(i); // Continue DFS if there's no mosquito
-                }
-            }
-        }
-    }
-
-    // Method to find the minimum number of doors to close
-    public int findMinDoorsToClose() {
-        for (int i = 0; i < n; i++) {
-            if (!visited[i] && roomTypes[i] == 1) {
-                dfs(i); // Start DFS from each sleeping kid room
-            }
-        }
-        return minDoorsToClose;
-    }
-    public static void main(String[] args) {
-        // Example usage:
-        int n = 5; // Number of rooms
-        int[][] doors = {
-                {0, 1, 1, 0, 0}, // Connections between rooms (adjacency matrix)
-                {1, 0, 1, 1, 0},
-                {1, 1, 0, 0, 1},
-                {0, 1, 0, 0, 1},
-                {0, 0, 1, 1, 0}
-        };
-        int[] roomTypes = {0, 1, 0, 2, 1}; // Types of rooms
-
-        Hotel hotel = new Hotel(n, doors, roomTypes);
-        int minDoorsToClose = hotel.findMinDoorsToClose();
-        System.out.println("Minimum number of doors to close: " + minDoorsToClose);
-    }
-}
-
-
-
-
-
+     public static void main(String[] args) {
+         int arr[]={0,1,0,1};
+         maxLen(arr, arr.length);
+     }
+ }
